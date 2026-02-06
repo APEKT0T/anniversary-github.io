@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Anniversary ❤️</title>
+    <!-- Google font used in style.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 🌸 Background flowers container -->
+    <div class="flowers"></div>
+
+    <!-- 💖 Main content -->
+    <div class="card">
+        <!-- ✏️ CHANGE HER NAME HERE -->
+        <h1>Happy Anniversary <br><span class="name">My Love 'May'</span> 💕</h1>
+
+        <p>You make my world brighter every single day 🌈</p>
+
+        <!-- 💌 Button to open popup -->
+        <button id="open-popup" onclick="openPopup()" aria-haspopup="dialog" aria-controls="popup">Click for my message 💌</button>
+    </div>
+
+    <!-- 💬 Popup message with photo slider -->
+    <div class="popup" id="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="popup-title">
+        <div class="popup-content">
+
+            <!-- ❌ Close button (use button for accessibility) -->
+            <button class="close" id="popup-close" onclick="closePopup()" aria-label="Close">×</button>
+
+            <h2 id="popup-title" class="visually-hidden">Anniversary message</h2>
+
+            <!-- 🖼️ PHOTO SLIDER (TOP PART) -->
+            <div class="photo-slider">
+
+                <!-- ✏️ ADD / CHANGE YOUR GF PICTURES HERE -->
+                <!-- Put image files in same folder or /images/ folder -->
+                <img src="p1.jpeg" alt="Photo 1" loading="lazy">
+                <img src="p2.jpeg" alt="Photo 2" loading="lazy">
+                <img src="p3.jpeg" alt="Photo 3" loading="lazy">
+                <img src="p4.jpeg" alt="Photo 3" loading="lazy">
+                <img src="p5.jpeg" alt="Photo 3" loading="lazy">
+                <img src="p6.jpeg" alt="Photo 3" loading="lazy">
+                <img src="p7.jpeg" alt="Photo 3" loading="lazy">
+                <img src="p8.jpeg" alt="Photo 3" loading="lazy">
+
+            </div>
+
+            <!-- 💌 WISH BOX (BOTTOM PART) -->
+            <div class="wish-box">
+
+                <!-- ✏️ WRITE YOUR ANNIVERSARY MESSAGE HERE -->
+                <p>
+                    Every moment with you feels like a beautiful dream.
+                    Thank you for loving me and being my forever 💕🌹
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

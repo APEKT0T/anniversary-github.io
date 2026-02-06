@@ -1,0 +1,165 @@
+/* 🌈 General page style */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+}
+
+/* 💖 Center card */
+.card {
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    z-index: 2;
+    text-align: center;
+    background: rgb(250, 255, 185);
+    padding: 40px;
+    border-radius: 20px;
+    width: 320px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* 🌸 Flowers container must cover viewport for floating effect */
+.flowers {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ✨ Name highlight */
+.name {
+    color: #ff4d6d;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* 💌 Button style */
+button {
+    background: #ff4d6d;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+/* 🌸 Flower animation */
+.flowers span {
+    position: absolute;
+    font-size: 24px;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* 💬 Popup background */
+.popup {
+    display: none; /* hidden by default; visible when .open is added */
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 3;
+    padding: 20px; /* small padding so content doesn't touch edges on small screens */
+}
+
+/* Show popup and center when open */
+.popup.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Utility: visually hidden (for screen reader titles) */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* 💬 Popup content */
+.popup-content {
+    background: rgb(247, 250, 200);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ❌ Close button (styled as unobtrusive button) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 22px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+/* 🖼️ Photo slider container */
+.photo-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;      /* 👈 left-right scroll */
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Hide scrollbar (optional, still scrollable) */
+.photo-slider::-webkit-scrollbar {
+    height: 6px;
+}
+.photo-slider::-webkit-scrollbar-thumb {
+    background: #ffb3c1;
+    border-radius: 10px;
+}
+
+/* 🖼️ Images style */
+.photo-slider img {
+    height: 160px;
+    min-width: 140px;
+    border-radius: 15px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 💌 Wish box */
+.wish-box {
+    background: #f3bac6;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000000;
+}
